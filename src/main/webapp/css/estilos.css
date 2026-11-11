@@ -1,0 +1,32 @@
+:root { --verde:#1b7a3d; --verde-osc:#14582c; --gris:#f3f5f4; --borde:#d5dad7; --rojo:#b3261e; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--gris); color:#222; }
+.encabezado { background:var(--verde); color:#fff; padding:14px 24px; display:flex; flex-wrap:wrap;
+              justify-content:space-between; align-items:center; gap:8px; }
+.encabezado h1 { margin:0; font-size:1.3rem; }
+.encabezado nav a { color:#fff; margin-left:16px; text-decoration:none; font-weight:bold; }
+.encabezado nav a:hover { text-decoration:underline; }
+.contenedor { max-width:960px; margin:24px auto; padding:0 16px; }
+.tarjeta { background:#fff; border:1px solid var(--borde); border-radius:8px; padding:16px 20px; margin-bottom:18px; }
+.formulario label { display:block; margin:10px 0 4px; font-weight:bold; }
+.formulario input, .formulario select { width:100%; max-width:420px; padding:8px; border:1px solid var(--borde); border-radius:4px; }
+.formulario.en-linea { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:12px; }
+.formulario.en-linea label { margin:0; }
+.formulario.en-linea input { width:auto; }
+button, .boton { display:inline-block; background:var(--verde); color:#fff; border:0; border-radius:4px;
+                 padding:8px 14px; cursor:pointer; text-decoration:none; font-size:.95rem; }
+button:hover, .boton:hover { background:var(--verde-osc); }
+.boton.secundario { background:#5f6b66; }
+button.peligro { background:var(--rojo); }
+.botones { margin-top:16px; display:flex; gap:8px; }
+.alerta { padding:10px 14px; border-radius:4px; margin:12px 0; }
+.alerta.exito { background:#e3f4e8; border:1px solid #9bd2ab; }
+.alerta.error { background:#fdeceb; border:1px solid #f1aaa5; color:var(--rojo); }
+.tabla-scroll { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; background:#fff; }
+th, td { padding:10px; border-bottom:1px solid var(--borde); text-align:left; }
+th { background:#e8efeb; }
+td.acciones { display:flex; gap:6px; align-items:center; }
+td.acciones form { margin:0; }
+.vacio { color:#666; font-style:italic; }
+.pie { text-align:center; padding:18px; color:#555; font-size:.85rem; }

@@ -1,0 +1,19 @@
+<%-- Fragmento incluido de forma ESTATICA (directiva include) en todas las vistas --%>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parqueadero Ibagó SAS</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilos.css">
+</head>
+<body>
+<header class="encabezado">
+    <h1>Parqueadero Ibagó SAS</h1>
+    <nav>
+        <a href="${pageContext.request.contextPath}/index.html">Inicio</a>
+        <a href="${pageContext.request.contextPath}/vehiculos">Vehículos</a>
+        <a href="${pageContext.request.contextPath}/vehiculos?accion=nuevo">Registrar</a>
+    </nav>
+</header>
+<main class="contenedor">

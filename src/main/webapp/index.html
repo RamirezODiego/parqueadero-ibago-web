@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parqueadero Ibagó SAS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="encabezado">
+    <h1>Parqueadero Ibagó SAS</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="vehiculos">Vehículos</a>
+        <a href="vehiculos?accion=nuevo">Registrar</a>
+    </nav>
+</header>
+
+<main class="contenedor">
+    <h2>Módulo de gestión de vehículos</h2>
+    <p>Consulte y administre los vehículos registrados en el parqueadero.</p>
+
+    <section class="tarjeta">
+        <h3>Buscar por placa (método GET)</h3>
+        <!-- GET: los datos viajan en la URL (vehiculos?accion=buscar&q=ABC) -->
+        <form action="vehiculos" method="get" class="formulario en-linea">
+            <input type="hidden" name="accion" value="buscar">
+            <label for="q">Placa</label>
+            <input type="text" id="q" name="q" maxlength="6" placeholder="ABC123" required>
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+
+    <section class="tarjeta">
+        <h3>Registro rápido (método POST)</h3>
+        <!-- POST: los datos viajan en el cuerpo de la peticion, no en la URL -->
+        <form action="vehiculos" method="post" class="formulario">
+            <input type="hidden" name="accion" value="guardar">
+
+            <label for="placa">Placa</label>
+            <input type="text" id="placa" name="placa" maxlength="6"
+                   pattern="[A-Za-z]{3}[0-9]{2}[0-9A-Za-z]" placeholder="ABC123" required>
+
+            <label for="tipo">Tipo de vehículo</label>
+            <select id="tipo" name="tipo" required>
+                <option value="">Seleccione...</option>
+                <option value="CARRO">Carro</option>
+                <option value="MOTO">Moto</option>
+                <option value="BICICLETA">Bicicleta</option>
+            </select>
+
+            <label for="propietario">Propietario</label>
+            <input type="text" id="propietario" name="propietario" maxlength="100" required>
+
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" name="telefono" maxlength="15" pattern="[0-9]{7,15}">
+
+            <button type="submit">Registrar vehículo</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>
