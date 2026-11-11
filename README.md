@@ -39,3 +39,4 @@ JDK 17+, Maven 3.9+, MySQL 8 y **Apache Tomcat 10.1** (Jakarta EE 10).
 | Formularios HTML con servlets | `index.html`, `formulario.jsp`, `lista.jsp` → `/vehiculos` |
 | Métodos GET y POST | `doGet` (listar, buscar, editar, nuevo) y `doPost` (guardar, eliminar) |
 | Elementos JSP | directivas `page`/`include`/`taglib`, declaración `<%! %>`, scriptlet `<% %>`, expresión `<%= %>`, `jsp:include`, EL y JSTL |
+# parqueadero-ibago-web
